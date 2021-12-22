@@ -1,0 +1,18 @@
+<div class="page--collections">
+  <div class="page--collections-left">
+    <app-image-library
+      [imageSelected]="imageSelected"
+      (eventSelectImage)="onSelectImage($event)"
+    ></app-image-library>
+  </div>
+  <div class="page--collections-right">
+    <app-info-product
+      [counter]="counter"
+      [discount]="discount"
+      [currentPrice]="currentPrice"
+      [lastPrice]="lastPrice"
+      [nameProduct]="name"
+      (addToCartEvent)="addToCart($event)"
+    ></app-info-product>
+  </div>
+</div>

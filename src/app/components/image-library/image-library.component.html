@@ -1,0 +1,13 @@
+<div *ngIf="images" class="library">
+    <div class="image--represent">
+      <img src="{{ imageSelected.src }}" alt="{{ imageSelected.src }}" />
+    </div>
+    <div
+      *ngFor="let img of images"
+      class="image--thumbnail"
+      [ngClass]="imageSelected.order === img.order ? 'image--selected' : ''"
+      (click)="onSelectImage(img)"
+    >
+      <img src="{{ img.thumbnail }}" alt="{{ img.thumbnail }}" />
+    </div>
+  </div>

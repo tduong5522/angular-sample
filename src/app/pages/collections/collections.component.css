@@ -1,0 +1,12 @@
+.page--collections {
+    display: flex;
+    justify-content: center;
+}
+
+.page--collections-left {
+    width: 40%;
+}
+
+.page--collections-right {
+    width: 40%;
+}

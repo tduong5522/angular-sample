@@ -1,0 +1,34 @@
+.library {
+    margin-top: 10rem;
+    display: grid;
+    grid-template-columns: 6rem 6rem 6rem 6rem;
+    grid-template-rows: auto 6rem;
+    grid-gap: 2rem;
+}
+
+.image--represent {
+    text-align: center;
+    grid-column-start: 1;
+    grid-column-end: 5;
+}
+
+.image--thumbnail {
+    text-align: center;
+    cursor: pointer;
+}
+
+.image--selected img {
+    opacity: 0.5;
+}
+
+.image--selected {
+    border : 4px solid hsl(25, 100%, 55%);
+    border-radius: 20px;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+}
+

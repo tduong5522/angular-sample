@@ -1,0 +1,37 @@
+<div class="info-product">
+    <h4 class="info--header">
+        SNEAKER COMPANY
+    </h4>
+    <h1 class="info--title">
+        {{nameProduct}}
+    </h1>
+    <p class="info--content">
+        These low-profile sneakers are your prefect casual wear companion. Featuring a durable rubber outer sole, they'll withstand everything the weather can offer.
+    </p>
+    <div class="info--price">
+        <span>
+            ${{currentPrice}}.00
+        </span>
+        <span>
+            {{discount}}%
+        </span>
+    </div>
+    <p class="last-price">
+        <del>${{lastPrice}}.00</del> 
+    </p>
+    <div class="info--cart">
+        <div class="info--cart-quantity">
+            <p class="quantity--icon" (click)="minusNumber()">
+                <img src="../../../assets/images/icon-minus.svg" alt="cart-image" >
+            </p>
+            <span>{{counter}}</span>
+            <p class="quantity--icon" (click)="plusNumber()">
+                <img src="../../../assets/images/icon-plus.svg" alt="cart-image" >
+            </p>
+        </div>
+        <button class="info--cart-button" (click)="addToCart()">
+            <img src="../../../assets/images/icon-cart-white.svg" alt="cart-image">
+            Add to cart
+        </button>
+    </div>
+</div>

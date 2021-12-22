@@ -1,0 +1,33 @@
+<nav class="navbar">
+  <div class="navbar--container">
+    <div class="navbar--category">
+      <h2 class="navbar--header">sneakers</h2>
+      <ul class="navbar--list">
+        <li *ngFor="let item of listNavBar" class="navbar--item">
+          <a routerLink="{{ item }}" class="navbar--link">{{ item }}</a>
+        </li>
+      </ul>
+    </div>
+    <div class="center navbar--info">
+      <img src="assets/images/icon-cart.svg" (click)="toggleCart()" />
+      <img src="assets/images/image-avatar.png" />
+    </div>
+  </div>
+  <div class="cart--info" *ngIf="isShowCart">
+    <h3 class="cart--title">Cart</h3>
+    <div class="center cart--empty" *ngIf="!numberProdInCart">
+      Your cart is empty
+    </div>
+    <ul class="cart--list" *ngIf="numberProdInCart">
+      <li class="cart--item" *ngFor="let prod of listProdInCart$ | async">
+        <img src="{{ prod.img }}" alt="" />
+        <div class="item--name">{{ prod.name }}</div>
+        <div class="item--price">
+          ${{ prod.price }}.00 x {{ prod.quantity }}
+          <b>${{ totalPrice(prod.price,prod.quantity) }}.00</b>
+        </div>
+        <img src="../../assets/images/icon-delete.svg" alt="delete-icon" />
+      </li>
+    </ul>
+  </div>
+</nav>
